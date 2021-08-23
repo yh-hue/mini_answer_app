@@ -1,0 +1,103 @@
+<!--pages/single/index.wxml-->
+<image class="background" src="../../image/background2.jpg" mode="widthFix"/>
+<view class="single">
+      
+      <block wx:if="{{!timu}}">
+           
+      </block>
+     
+     <block wx:else>
+          <view class="statistics">
+          <view class="text">
+                <view>当前已做到第 <text>{{index_show+1}} </text>题/共<text> {{length}} </text>题</view>
+                <view>
+                     本题剩余时间：<text class="count_down">{{countDownNum}}</text>秒
+                </view>
+          </view>
+          <progress class="jingdu" active percent="{{(index_show+1)/length*100}}"
+          active-mode="forwards" show-info border-radius="5" stroke-width="10"
+          >
+          </progress>
+      </view>
+      <view class="timu" wx:for="{{timu}}"  wx:if="{{index_show==index?true:false}}">
+           <view class="tigan">{{item.type=='0'?'[单选题]':'[多选题]'}} {{item.detail}}</view>
+           <block wx:if="{{item.type=='0'}}">
+                <radio-group bindchange="radioChange">
+                <label class="choice">
+                     <view class="btn">
+                          <radio value="A" checked="{{user_choose[index_show]=='A'?true:false}}"/>
+                     </view>
+                     <view class="xuanx">{{item.choiceA}}</view>
+                </label>
+                <label class="choice">
+                     <view class="btn">
+                          <radio value="B" checked="{{user_choose[index_show]=='B'?true:false}}"/>
+                     </view>
+                     <view class="xuanx">{{item.choiceB}}</view>
+                </label>
+                <label class="choice">
+                     <view class="btn">
+                          <radio value="C" checked="{{user_choose[index_show]=='C'?true:false}}"/>
+                     </view>
+                     <view class="xuanx">{{item.choiceC}}</view>
+                </label>
+                <label class="choice" wx:if="{{item.choiceD!=null}}">
+                     <view class="btn">
+                          <radio value="D" checked="{{user_choose[index_show]=='D'?true:false}}"/>
+                     </view>
+                     <view class="xuanx">{{item.choiceD}}</view>
+                </label>
+                </radio-group>
+          </block>
+          <block wx:else>
+               <checkbox-group bindchange="boxChange">
+                    <label class="choice">
+                          <view class="btn">
+                               <checkbox value="A" checked="{{user_choose[index_show].A?true:false}}"/>
+                          </view>
+                          <view class="xuanx">{{item.choiceA}}</view>
+                    </label>
+                    <label class="choice">
+                          <view class="btn">
+                               <checkbox value="B" checked="{{user_choose[index_show].B?true:false}}"/>
+                          </view>
+                          <view class="xuanx">{{item.choiceB}}</view>
+                    </label>
+                    <label class="choice">
+                          <view class="btn">
+                               <checkbox value="C" checked="{{user_choose[index_show].C?true:false}}"/>
+                          </view>
+                          <view class="xuanx">{{item.choiceC}}</view>
+                    </label>
+                    <label class="choice">
+                          <view class="btn">
+                               <checkbox value="D" checked="{{user_choose[index_show].D?true:false}}"/>
+                          </view>
+                          <view class="xuanx">{{item.choiceD}}</view>
+                    </label>
+               </checkbox-group>
+          </block>
+      </view>
+      <view class="tool">
+           <!-- <view class="back Comm" wx:if="{{index_show>=1}}" bindtap="handleBack">上一题</view>-->
+           <view class="forward Comm" wx:if="{{length-index_show!=1}}" bindtap="handleForward">下一题</view>
+           <view class="Comm" wx:if="{{length-index_show==1}}" bindtap="submit">提交</view>
+      </view>
+      <view class="mask_warp fade-in" style="display:{{mask_style}}">
+         <view class="mask">
+             <view class="title" >{{level}}</view>
+                 <view class="content">本次答题得分为:<text>{{score}}</text> </view>
+                 <view class="content">正确率:<text>{{accuracy}}%</text></view>
+                 <view class="content">
+                      答对题数:<text>{{right}}</text>   获得积分:<text>{{right*10}}</text>
+                 </view>
+                 <view class="content">（错题可前往个人中心--->错题集中查看~）</view>
+             <view class="btn" bindtap="handleconfirm">确定</view>
+         </view>
+    </view>
+     </block>
+       
+      
+        
+     
+</view>

@@ -1,0 +1,52 @@
+<!--pages/ranks/index.wxml-->
+<Tabs tabs="{{tabs}}" bindtabsItemChange="handletabsItemChange"></Tabs> 
+
+<view class="rank">
+
+     <block wx:if="{{tabs[0].isActive}}">
+
+         <view class="my_rank">我的排名：<text>{{myRank?myRank:'未上榜'}}</text></view>
+         <view class="dis_rank ">
+             <view class="num">排名</view>
+             <view class="img">姓名/昵称</view>
+             <view>积分</view>
+             <view class="department">专业班级</view>
+         </view>    
+
+         <view class="loading" wx:if="{{loading}}">
+             <image class="" src="../../image/loading3.gif" mode="widthFix"/>
+         </view>
+         <block wx:else>
+             <view class="dis_rank fade-in " wx:for="{{dis_rank}}"  wx:key="Name" wx:if="{{index<=499}}">
+                 <view class="num {{index<=2?style[index]:''}}">{{index+1<=3?'':index+1}}</view>
+                 <view class="img">
+                      <image  src="{{item.image}}" mode="widthFix"/> {{item.Name}}
+                 </view>
+                 <view>{{item.total_credit}}</view>
+                 <view class="department">{{item.department}}</view>
+             </view>    
+         </block>
+           
+         
+
+     </block>
+
+     <block wx:elif="{{tabs[1].isActive}}">
+         <view class="my_rank">我的排名：<text>{{myAnswer_Rank?myAnswer_Rank:'未上榜'}}</text></view>
+         <view class="dis_rank ">
+             <view class="num">排名</view>
+             <view class="img">姓名/昵称</view>
+             <view>积分</view>
+             <view class="department">专业班级</view>
+         </view>    
+         <view class="dis_rank fade-in" wx:for="{{Ans_Rank}}"  wx:key="Name">
+             <view class="num {{index<=2?style[index]:''}}">{{index+1<=3?'':index+1}}</view>
+             <view class="img">
+                 <image  src="{{item.image}}" mode="widthFix"/> {{item.Name}}
+             </view>
+             <view>{{item.answer_credit}}</view>
+              <view class="department">{{item.department}}</view>
+         </view>            
+     </block>
+     
+</view>

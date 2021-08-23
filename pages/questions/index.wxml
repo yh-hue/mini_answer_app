@@ -1,0 +1,16 @@
+<!--pages/questions/index.wxml-->
+<view class="questions">
+     <navigator class="special" 
+     wx:for="{{special_list}}"
+     wx:key="title"
+     url="/pages/single/index?tiku_id={{item.tiku_id}}"
+     >
+          <image src="{{item.src}}" mode="widthFix"/>
+          <text>{{item.title}}</text>
+          <view class="mask" style="display:{{item.isactive?'none':'flex'}}">
+               <image src="../../image/unable.png" mode="widthFix" />
+                 
+          </view>
+     </navigator>
+       
+</view>

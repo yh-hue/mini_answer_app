@@ -1,0 +1,115 @@
+/* pages/user/index.wxss */
+page {
+  width: 100%;
+  height: 100%;
+}
+.user {
+  background-color: #dedede;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  color: #333;
+}
+.user .user_login_info_warp {
+  height: 45vh;
+  background-color: var(--themeColor);
+  position: relative;
+}
+.user .user_login_info_warp .userInfo_warp {
+  position: relative;
+}
+.user .user_login_info_warp .userInfo_warp .big_imag image {
+  height: 46vh;
+  width: 100%;
+  filter: blur(10rpx);
+}
+.user .user_login_info_warp .userInfo_warp .small_imag {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 30%;
+}
+.user .user_login_info_warp .userInfo_warp .small_imag image {
+  border-radius: 50%;
+  width: 200rpx;
+}
+.user .user_login_info_warp .userInfo_warp .small_imag view {
+  text-align: center;
+  margin-top: 30rpx;
+  color: white;
+  font-size: 35rpx;
+  font-weight: 200;
+}
+.user .user_login_info_warp .btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 30%;
+  font-size: 30rpx;
+  font-weight: 400;
+  background-color: #fff;
+}
+.user .suspension_bar {
+  position: absolute;
+  display: flex;
+  width: 94%;
+  height: 40px;
+  left: 2.8%;
+  top: 40%;
+  border-radius: 5px;
+  background-color: #fff;
+  text-align: center;
+}
+.user .suspension_bar .my_credit {
+  flex: 1;
+}
+.user .suspension_bar .my_credit view {
+  color: #1296db;
+}
+.user .suspension_bar .colection {
+  flex: 1;
+}
+.user .suspension_bar .colection view {
+  color: #1296db;
+}
+.user .suspension_bar .heistory {
+  flex: 1;
+}
+.user .suspension_bar .heistory view {
+  color: #1296db;
+}
+.user .tool_bar {
+  width: 94%;
+  height: 49%;
+  margin: 20px auto;
+  border-radius: 5px;
+  background-color: #fff;
+}
+.user .tool_bar .Comm {
+  display: flex;
+  justify-content: space-between;
+  height: 44px;
+  padding: 10px 20px;
+  line-height: 30px;
+  border-bottom: 1px solid #dedede;
+}
+.user .tool_bar .Comm view {
+  color: #1296db;
+}
+.user .tool_bar .contact {
+  position: relative;
+}
+.user .tool_bar .contact button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.user .tool_bar .banBen {
+  border-bottom: 1px solid transparent;
+}
+.user .tool_bar .banBen view {
+  color: #333;
+}

@@ -1,0 +1,137 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/myroute/index",
+          "pathName": "pages/myroute/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/user/index",
+          "pathName": "pages/user/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/single/index",
+          "pathName": "pages/single/index",
+          "query": "tiku_id=0",
+          "scene": null
+        },
+        {
+          "name": "pages/historyStep/index",
+          "pathName": "pages/historyStep/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/myInfo/index",
+          "pathName": "pages/myInfo/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/single/index",
+          "pathName": "pages/single/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/ranks/index",
+          "pathName": "pages/ranks/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/multiple/index",
+          "pathName": "pages/multiple/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/questions/index",
+          "pathName": "pages/questions/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/about/index",
+          "pathName": "pages/about/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/sectionInfo/index",
+          "pathName": "pages/sectionInfo/index",
+          "query": "page_id=0",
+          "scene": null
+        },
+        {
+          "name": "pages/problem_Collection/index",
+          "pathName": "pages/problem_Collection/index",
+          "query": "tiku_id=1",
+          "scene": null
+        },
+        {
+          "name": "pages/problem_index/index",
+          "pathName": "pages/problem_index/index",
+          "query": "tiku_id=0",
+          "scene": null
+        },
+        {
+          "name": "pages/myCredit/index",
+          "pathName": "pages/myCredit/index",
+          "query": "tiku_id=0",
+          "scene": null
+        },
+        {
+          "name": "pages/myInfo/index",
+          "pathName": "pages/myInfo/index",
+          "query": "tiku_id=0",
+          "scene": null
+        },
+        {
+          "name": "pages/guide/index",
+          "pathName": "pages/guide/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/about/index",
+          "pathName": "pages/about/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "tiku_id=0",
+          "scene": null
+        },
+        {
+          "name": "pages/statistics/index",
+          "pathName": "pages/statistics/index",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,23 @@
+/* pages/historyStep/index.wxss */
+page {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  margin-top: 20px;
+}
+.container .week {
+  width: 90%;
+  height: 40%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.container .month {
+  width: 90%;
+  height: 40%;
+  margin: 0 auto;
+}

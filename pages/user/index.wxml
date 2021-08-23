@@ -1,0 +1,87 @@
+<!--pages/user/index.wxml-->
+<view class="user">
+
+    <!--登录框开始 -->
+     <view class="user_login_info_warp">
+         <block wx:if="{{hasUserInfo}}">
+             <view class="userInfo_warp fade-in">
+                 <view class="big_imag ">
+                     <image src="{{userInfo.avatarUrl}}" mode="aspectFill"/>
+                 </view>
+
+                 <view class="small_imag">
+                      <image src="{{userInfo.avatarUrl}}" mode="widthFix"/>
+                     <view>{{userInfo.nickName}}</view>
+                 </view>
+             </view>
+         </block>
+         
+
+         <block wx:else>
+             <button class="btn" wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 登录 </button>
+             <button class="btn" wx:else open-type="getUserInfo" bindgetuserinfo="handlegetUserInfo">
+                  登录 
+            </button>
+         </block>
+     </view>
+    <!--登录框结束 -->
+
+    <!--悬浮栏开始 -->
+    <view class="suspension_bar">
+         <navigator class="my_credit" url="/pages/myCredit/index">
+             <text>我的积分</text>
+             <view class="iconfont .icon-pre_icon_wodejifen"></view>
+         </navigator>
+         <navigator class="colection" url="/pages/problem_index/index">
+             <text>错题集</text>
+             <view class="iconfont .icon-cuoti"></view>
+         </navigator>
+         <navigator class="heistory" url="/pages/historyStep/index">
+             <text>历史步数</text>
+             <view class="iconfont .icon-bushu"></view>
+         </navigator>
+    </view>
+      
+    <!--悬浮栏结束 -->
+
+
+    <!--底部工具栏开始 -->
+    <view class="tool_bar">
+         <navigator class="my_info Comm" url="/pages/myInfo/index">
+             <text>我的资料</text>
+             <view>></view>
+         </navigator>    
+         <navigator class="rank Comm" url="/pages/ranks/index">
+             <text>排行榜</text>
+             <view>></view>
+         </navigator>
+         <navigator class="feedback Comm" url="/pages/feedback/index">
+             <text>意见反馈</text>
+             <view>></view>
+         </navigator> 
+         <view class="setting Comm" bindtap="handleopenSetting">
+             <text>授权设置</text>
+             <view>></view>
+         </view> 
+         <view class="contact Comm" bintap="handleContact">
+             <text>联系客服</text>
+             <view>></view>
+             <button open-type="contact" ></button>
+         </view>    
+         <navigator class="about Comm" url="/pages/about/index">
+              <text>关于开发者</text>
+             <view>></view>
+         </navigator>
+         <view class="banBen Comm">
+         <text>版本号</text>
+         <view>v1.0.3</view>
+         </view>
+    </view>
+    <!--底部工具栏结束 -->
+
+      
+
+    
+       
+</view>
+  

@@ -1,0 +1,12 @@
+<!--pages/problem_index/index.wxml-->
+<view class="list">
+     <view class="title">章节错题分类</view>
+     <navigator class="section" 
+     wx:for="{{special_list}}"
+     url="{{item.url}}"
+     >
+         {{item.title}}
+     </navigator>
+       
+</view>
+  

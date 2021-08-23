@@ -1,0 +1,40 @@
+<!--pages/feedback/index.wxml-->
+<!--pages/feedback/index.wxml-->
+<view class="feedback">
+     <view class="fd_title">
+        问题的种类
+     </view>
+
+     <view class="fd_tips">
+         <view>题目有错</view>
+         <view>功能建议</view>
+         <view>积分计算有误</view>
+         <view>性能问题</view>
+         <view>其他</view>
+     </view>
+
+     <view class="fd_content_warp">
+         <textarea class="text" value="{{text}}" bindinput="handleTextInput" placeholder="请描述一下您的问题"></textarea>
+
+         <view class="addImage">
+              <button bindtap="handleChoose">+</button>
+              <view class="img_warp"
+              wx:for="{{img_url}}" 
+              wx:key="*this"
+              bindtap="handleDelete"
+              data-index="{{index}}"
+              >
+                  <UpImage img_url="{{item}}"></UpImage>
+              </view>
+         </view>
+     </view>
+       
+
+     <view class="form_btn_warp">
+         <button bindtap="handleSubmit">
+             ✔提交
+         </button> 
+     </view>
+
+</view>
+  

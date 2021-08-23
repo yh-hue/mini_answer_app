@@ -1,0 +1,66 @@
+/* pages/feedback/index.wxss */
+page {
+  padding: 0;
+  margin: 0;
+  background-color: #eeeeee;
+}
+.feedback {
+  padding: 20rpx;
+  color: #666;
+  font-size: 26rpx;
+}
+.feedback .fd_title {
+  padding: 20rpx;
+}
+.feedback .fd_tips {
+  display: flex;
+  flex-wrap: wrap;
+}
+.feedback .fd_tips view {
+  padding: 10rpx;
+  width: 30%;
+  border: 1rpx solid #fff;
+  border-radius: 10rpx;
+  background-color: #fff;
+  text-align: center;
+  margin: 10rpx;
+}
+.feedback .fd_content_warp {
+  background-color: #fff;
+  margin: 20rpx;
+  padding: 20rpx;
+}
+.feedback .fd_content_warp .addImage {
+  display: flex;
+  flex-wrap: wrap;
+}
+.feedback .fd_content_warp .addImage button {
+  margin: 0;
+  color: #666;
+  width: 90rpx;
+  height: 90rpx;
+  font-size: 40rpx;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+  border: 2rpx solid #dedede;
+}
+.feedback .fd_content_warp .addImage .img_warp {
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+}
+.feedback .form_btn_warp {
+  margin-top: 20rpx;
+}
+.feedback .form_btn_warp button {
+  width: 200rpx;
+  height: 70rpx;
+  color: #fff;
+  font-size: 30rpx;
+  font-weight: 200;
+  margin-right: 20rpx;
+  background-color: var(--themeColor);
+}

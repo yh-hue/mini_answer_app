@@ -1,0 +1,30 @@
+<!--pages/ranks/index.wxml-->
+<Tabs tabs="{{tabs}}" bindtabsItemChange="handletabsItemChange"></Tabs> 
+
+<view class="rank">
+
+     <block wx:if="{{tabs[0].isActive}}">
+
+         <view class="my_rank">我的排名：{{myRank}}</view>
+         <view class="dis_rank " wx:for="{{dis_rank}}"  wx:key="Name">
+             <view class="num {{index<=2?style[index]:''}}">{{index+1<=3?'':index+1}}</view>
+             <image  src="{{item.image}}" mode="widthFix"/>
+             <view>{{item.Name}}</view>
+             <view>{{item.totalDistance}}积分</view>
+             <view>{{item.department}}</view>
+         </view>    
+
+     </block>
+
+     <block wx:elif="{{tabs[1].isActive}}">
+         <view class="my_rank">我的排名：{{my_rank}}</view>
+         <view class="dis_rank" wx:for="{{dis_rank}}" wx:key="*this">
+             <view>{{index+1}}</view>
+             <image  src="{{item.image}}" mode="widthFix"/>
+             <view>{{item.Name}}</view>
+             <view>{{item.totalDistance}}</view>
+             <view>{{item.department}}</view>
+         </view>            
+     </block>
+     
+</view>

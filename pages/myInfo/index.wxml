@@ -1,0 +1,49 @@
+<!--pages/myInfo/index.wxml-->
+<view class="myInfo">
+     <view class="nickName Comm">
+         <text>昵称</text>
+         <view>{{nickName}}</view>
+     </view>
+     <view class="name Comm">
+         <text>姓名</text>
+         <view wx:if="{{Name}}" bindtap="handleSetting">{{Name}}</view>
+         <view wx:else  bindtap="handleSetting">未设置 ></view>
+     </view>
+     <view class="department Comm">
+         <text>专业班级</text>
+         <view  wx:if="{{de_class}}" bindtap="handleSetting">{{de_class}}</view>
+         <view wx:else  bindtap="handleSetting">未设置 ></view>
+     </view>
+     <view class="id Comm">
+         <text>学号</text>
+         <view  wx:if="{{id}}" bindtap="handleSetting">{{id}}</view>
+         <view wx:else bindtap="handleSetting">未设置 ></view>
+     </view>
+
+     <view class="mask_warp" style="display:{{mask_style}}"> 
+         <view class="mask">
+             <view class="title" >设置用户信息</view>
+             <view class="info">
+                 <input class="info_name" type="text"  placeholder="请输入您的姓名" bindinput="handleNameInput"> </input>
+                 <input class="info_id" type="text"  placeholder="请输入您的学号" bindinput="handleIdInput"> </input>
+                 <!--
+                 <view class="selector">
+                     <text class="selector_title">选择您的学院</text>
+                     <picker header-text="选择您的学院" bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+                         <text class="picker">
+                             当前选择：
+                          </text>
+                          <view>
+                              {{array[index]}}
+                          </view>
+                     </picker>
+                 </view>    -->
+                 <input class="info_class" type="text"  placeholder="请输入您的专业班级(如通信1902)" bindinput="handleclassInput"> </input>
+                 <view class="btn Submit" bindtap="handleSubmit">提交</view>
+                 <view class="btn Cancel" bindtap="handleCancel">取消</view>
+             </view>
+         </view>
+     </view>
+
+       
+</view>

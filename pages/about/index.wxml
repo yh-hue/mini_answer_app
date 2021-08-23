@@ -1,0 +1,23 @@
+<!--pages/about/index.wxml-->
+<view class="about">
+     <view class="title">欢迎加入厂里物联网实验室!!!!</view>
+     <view class="info">
+          <view>你想结交更多志同道合的朋友吗？</view>
+          <view>你想认识更多厉害的学长学姐吗？</view>
+          <view>你还在为打比赛找不到优秀的队友而心生烦恼吗？</view>
+          <view>如果你有</view>
+          <view>那还等什么?</view>
+          <view>快快加入我们吧！</view>
+          <view>在这里，你不仅仅能够与我们一起学习各种技术</view>
+          <view>我们还能为你提供免费的学习空间</view>
+          <view>妈妈再也不用担心你去图书馆找不到座位啦！</view>
+          <view>什么？你害怕太菜被嫌弃</view>
+          <view>不用怕！</view>
+          <view>这位温柔帅气的学长会扫清你心中的所有顾虑，相信我</view>
+          <view>looyeagee@stu.csust.edu.cn(312393088)</view>
+          <view>我们欢迎任何认真，积极，努力有责任心的同学</view>
+          <view>期待你的加入</view>
+
+
+     </view>
+</view>

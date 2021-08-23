@@ -1,0 +1,25 @@
+<!--pages/problem_Collection/index.wxml-->
+<view class="problems">
+      <block wx:if="{{wrong}}">
+          <view class="timu" wx:for="{{wrong}}">
+                <view class="title">{{item.detail}}</view>
+                <view>{{item.choiceA}}</view>
+                <view>{{item.choiceB}}</view>
+                <view>{{item.choiceC}}</view>
+                <view wx:if="{{item.choiceD!=null}}">{{item.choiceD}}</view>
+                <view class="right">{{item.answer}}</view>
+          </view>
+          <view wx:if="{{wrong.length==0}}" class="none">
+                太棒了，你答对了本章的所有题目！
+          </view>
+      </block>
+      <block wx:else>
+           <view class="loading" wx:if="{{loading}}">
+                 <image class="" src="../../image/loading2.gif" mode="widthFix"/>
+           </view>
+           <view class="none" wx:else>
+                当前还没有该章节的错题信息噢~~
+           </view>
+      </block>
+</view>
+  

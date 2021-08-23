@@ -1,0 +1,12 @@
+<!--pages/historyStep/index.wxml-->
+<view class="container">
+
+   <view class="week">
+     <echarts class="echarts" id="mychart-week" canvas-id="mychart-week" ec="{{ weekStep }}">  </echarts>
+   </view>
+
+   <view class="month">
+     <echarts class="echarts"  id="mychart-month" canvas-id="mychart-month" ec="{{ monthStep }}">  </echarts>
+   </view>
+    
+</view>

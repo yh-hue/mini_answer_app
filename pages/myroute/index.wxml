@@ -1,0 +1,128 @@
+<view class="route_record">
+    <block wx:if="{{special_list==''}}">
+         <view class="loading">
+            <image src="../../image/loading.gif" mode="aspectFill" />
+         </view> 
+    </block>
+
+    <block wx:else>
+         <image class="background" src="../../image/background1.jpg" mode="widthFix"/>
+         <view class="top" wx:if="{{!complete}}">
+            <view class="text">距离解锁下一章节还需<text>{{need}}</text>积分</view>
+            <progress class="jingdu"  show-info  activeColor="#f00a1d" active-mode="forwards"
+                percent="{{have}}" border-radius="5" stroke-width="10"
+                >
+                
+            </progress>
+         </view>
+         <view class="top" wx:else>
+             <view class="complete">恭喜你已经解锁所有关卡</view>
+         </view>
+         <scroll-view scroll-top="{{scrollTop}}" class="questions" scroll-y>
+            <view class="special fade-in" 
+            wx:for="{{special_list}}"
+            wx:key="title"
+            data-index="{{index}}"
+            bindtap="{{item.isactive?'handleAswer':'handleHint'}}"
+            >
+                 <image  src="{{item.src}}" mode="aspectFit" lazy-load="true"/>
+                 <text>{{item.title}}</text>
+                 <view class="mask2" style="display:{{item.isactive?'none':'flex'}}">
+                      <image src="../../image/unable.png" mode="widthFix" /> 
+                 </view>
+            </view>
+         </scroll-view>
+    </block>
+      
+    <view class="ask_mask mask_warp" style="display:{{ask_mask1}}">
+         <view class="mask">
+             <view class="mask_title">小提示</view>
+             <view class="content">每章我们都只会记录<text>前三次</text>答题所得积分噢，你还有<text>{{3-section_info[ind]}}</text>次机会获得积分，确认进入答题？</view>
+             <view class="btn" bindtap="handleAsk_confirm">确定</view>
+             <view class="btn cancle" bindtap="handleAsk_Cancle">我再想想</view>
+         </view>
+    </view>
+    <view class="ask_mask mask_warp" style="display:{{ask_mask2}}">
+         <view class="mask">
+         <view class="mask_title">小提示</view>
+             <view class="content">该章节你的有效答题次数<text>已用完</text>，接下来答题将<text>不再获得积分</text>，确认进入答题？</view>
+             <view class="btn" bindtap="handleAsk_confirm">确定</view>
+             <view class="btn cancle" bindtap="handleAsk_Cancle">不用了</view>
+         </view>
+    </view>
+     
+
+    <view class="mask_warp fade-in " style="display:{{mask_style}}">
+         <view class="mask">
+             <view class="title" >兑换成功</view>
+                 <view class="content">你已经累计兑换{{totalDistance}}积分，离终点越来越近了噢，继续加油~</view>
+             <view class="btn" bindtap="handleconfirm">确定</view>
+         </view>
+    </view>
+
+    <view class="my_route_info">
+       <view class="title1">路线图</view>
+       <view class="duihuan_btn">
+             <view class="duihuan_info"  wx:if="{{useableStep >=100}}">可兑换{{DH_step}}积分</view>
+             <view class="duihuan_info" wx:else>还差{{100-useableStep}}步可以GO</view>
+             <view class="duihuan" bindtap="handleDH" wx:if="{{useableStep>=100}}">
+                 <text>兑换积分</text>
+                 <view>GO</view>
+             </view>
+             <view class="bn_duihuan" wx:else>
+                 <text>兑换积分</text>
+                 <view>GO</view>
+             </view>
+       </view>
+         
+       
+       
+       <view class="info_warp">
+           <navigator class="title" url="/pages/sectionInfo/index?page_id={{page_id}}">
+             <view class="right">
+                 <text>已解锁第{{currentLevel}}章</text>
+                 <view class="cur_place">{{currentLevelName}} ></view>
+             </view>
+                
+               
+           </navigator>
+            
+           <view class="totalStep">
+               <view class="distance">
+                   <text>累计兑换</text>
+                   <view> {{totalDistance}}积分</view>   
+               </view>
+
+               <view class="totalDay">
+                   <text>累计兑换天数</text>
+                   <view> {{totalDay}}天</view>  
+               </view>
+
+               <navigator class="rank" url="/pages/ranks/index">
+                   <text>排名 ></text>
+                   <view> {{myRank}}</view>  
+               </navigator>     
+           </view>  
+
+            <view class="toDayStep">
+               <view class="distance">
+                   <text>兑换比例</text>
+                   <view> 200步=1积分</view>   
+               </view>
+
+               <view class="can">
+                   <text>今日兑换步数</text>
+                   <view> {{usedStep}}</view>  
+               </view>
+
+               <view class="todayStep">
+                   <text>可兑换步数</text>
+                   <view> {{useableStep}}</view>  
+               </view>     
+           </view>  
+
+       </view>
+    </view>
+      
+</view>
+ 

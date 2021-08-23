@@ -1,0 +1,5 @@
+<!--components/UpImage.wxml-->
+<view class="Up_img_warp">
+     <icon class="" type="clear" size="18" color="red"> </icon>
+     <image src="{{img_url}}"></image>
+</view>

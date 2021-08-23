@@ -1,0 +1,11 @@
+<!--pages/statistics/index.wxml-->
+<view class="warp">
+     <view class="title">
+       <view class="text">团支部</view>
+       <view class="text">参与人数</view>
+     </view>
+     <view class="statistic" wx:for="{{detail}}" wx:key="*this"> 
+           <view class="department">{{item._id}}</view>
+           <view class="num">{{item.num}}</view>
+     </view>
+</view>

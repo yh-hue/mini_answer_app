@@ -1,0 +1,25 @@
+/* pages/statistics/index.wxss */
+.warp .statistic {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 10px 0 10px;
+}
+.warp .statistic .department {
+  flex: 1;
+  border-bottom: 1px solid #dedede;
+  padding-bottom: 5px;
+}
+.warp .statistic .num {
+  flex: 1;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #dedede;
+}
+.warp .title {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 10px 0px 10px;
+  font-weight: 800;
+}
+.warp .title .text {
+  flex: 1;
+}

@@ -1,0 +1,388 @@
+/* pages/myroute/index.wxss */
+page {
+  height: 100%;
+  width: 100%;
+}
+
+.route_record {
+  position: relative;
+  height: 100%;
+  width: 100%;
+
+  .top {
+    background-color: #fff;
+    padding: 10px;
+    height: 60px;
+    border-radius: 0 0 10px 10px;
+    color: #666;
+
+    text {
+      color: var(--themeColor);
+      padding: 0 5px;
+    }
+
+    .complete {
+      text-align: center;
+      line-height: 40px;
+      color: #fff;
+      background-color: var(--themeColor);
+      font-weight: 800;
+    }
+  }
+
+  .mask_warp {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60%;
+  }
+
+  .mask {
+    //display: none;
+    position: absolute;
+    width: 250px;
+    height: 300px;
+    z-index: 2;
+    top: 40%;
+    left: 50%;
+    margin-top: -150px;
+    margin-left: -125px;
+    background-color: #fff;
+    border-radius: 20px;
+
+    .title {
+      height: 150px;
+      width: 100%;
+      background-color: var(--themeColor);
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      text-align: center;
+      line-height: 150px;
+      font-size: 26px;
+      color: #fff;
+      font-weight: 800;
+    }
+
+    .content {
+      padding: 20px 10px;
+      color: #333;
+    }
+
+    .btn {
+      width: 100px;
+      height: 30px;
+      margin: 20px auto;
+      border-radius: 5px;
+      background-color: #00b23b;
+      color: #fff;
+      text-align: center;
+      line-height: 30px;
+    }
+  }
+
+  .ask_mask {
+
+    .mask {
+      margin-top: 10px;
+      height: 300px;
+      top: 25%;
+
+      .mask_title {
+        height: 25% !important;
+        text-align: center;
+        width: 100%;
+        background-color: var(--themeColor);
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        text-align: center;
+        font-size: 24px;
+        color: #fff;
+        font-weight: 500;
+        line-height: 75px;
+      }
+
+      .content {
+        padding: 20px 20px 0px 20px !important;
+        text-indent: 2em;
+        line-height: 30px;
+      }
+
+      .cancle {
+
+        background-color: #53affd;
+      }
+
+      text {
+        color: var(--themeColor);
+        padding: 0 5rpx;
+
+      }
+
+      ;
+    }
+  }
+
+  .background {
+    width: 100%;
+    height: 68%;
+    position: fixed;
+    background-size: 100% 100%;
+    z-index: -1;
+  }
+
+  .questions {
+    width: 100%;
+    height: 60%;
+
+
+    .special {
+      position: relative;
+      float: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      height: 30%;
+      margin-top: 20rpx;
+
+
+      image {
+        border-radius: 10rpx;
+        width: 80%;
+        height: 80%;
+      }
+
+      text {
+        margin-top: 8rpx;
+        color: #222;
+        font-size: 24rpx;
+      }
+
+      .mask2 {
+        position: absolute;
+        width: 80%;
+        height: 79%;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10rpx;
+        background-color: rgba(0, 0, 0, .5);
+
+        image {
+          width: 30%;
+
+        }
+      }
+    }
+  }
+
+  .my_route_info {
+    position: absolute;
+    height: 30%;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #dedede;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    padding: 20px;
+
+    .title1 {
+      margin-bottom: 5px;
+      font-size: 24px;
+      color: var(--themeColor);
+    }
+
+    .duihuan_btn {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 120px;
+      height: 120px;
+      top: -36%;
+      left: 50%;
+      margin-left: -60px;
+
+      .duihuan_info {
+        margin-bottom: 3px;
+        padding: 5px;
+        border-radius: 20px 20px 20px 20px;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        font-size: 12px;
+        font-weight: 400;
+      }
+
+      .duihuan {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 80px;
+        height: 80px;
+        border: 1px solid var(--themeColor);
+        border-radius: 50%;
+        background-color: var(--themeColor);
+
+        text {
+          font-size: 12px;
+          color: #fff;
+        }
+
+        view {
+          font-size: 24px;
+          font-weight: 600;
+          color: #fff;
+        }
+      }
+
+      .bn_duihuan {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 80px;
+        height: 80px;
+        border: 1px solid #666;
+        border-radius: 50%;
+        background-color: #666;
+
+        text {
+          font-size: 12px;
+          color: #ccc;
+        }
+
+        view {
+          font-size: 24px;
+          font-weight: 600;
+          color: #ccc;
+        }
+      }
+    }
+
+
+    .info_warp {
+
+      .title {
+        display: flex;
+        margin-bottom: 10px;
+
+        .right {
+          display: flex;
+          flex: 1;
+
+          text {
+            color: #666;
+            margin-right: 10px;
+          }
+
+          .cur_place {
+            color: #53affd;
+          }
+        }
+
+
+      }
+
+      .totalStep {
+        display: flex;
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 14px;
+        color: #666;
+
+        .distance {
+          flex: 1;
+
+          text {}
+
+          view {
+            color: #222;
+            font-size: 26rpx;
+          }
+        }
+
+        .totalDay {
+          flex: 1;
+
+          text {}
+
+          view {
+            color: #222;
+            font-size: 26rpx;
+          }
+        }
+
+        .rank {
+          flex: 1;
+
+          text {
+            color: #53affd;
+
+          }
+
+          view {
+            color: var(--themeColor);
+            font-size: 26rpx;
+          }
+        }
+      }
+
+      .toDayStep {
+        display: flex;
+        text-align: center;
+        font-size: 14px;
+        color: #666;
+
+        .distance {
+          flex: 1;
+
+          text {}
+
+          view {
+            color: #222;
+            font-size: 26rpx;
+          }
+        }
+
+        .can {
+          flex: 1;
+
+          text {}
+
+          view {
+            color: #222;
+            font-size: 26rpx;
+          }
+        }
+
+        .todayStep {
+          flex: 1;
+
+          text {}
+
+          view {
+            color: #222;
+            font-size: 26rpx;
+          }
+        }
+      }
+    }
+  }
+}

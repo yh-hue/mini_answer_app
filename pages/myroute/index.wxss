@@ -1,0 +1,308 @@
+/* pages/myroute/index.wxss */
+page {
+  height: 100%;
+  width: 100%;
+}
+.route_record {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.route_record .top {
+  background-color: #fff;
+  padding: 10px;
+  height: 60px;
+  border-radius: 0 0 10px 10px;
+  color: #666;
+}
+.route_record .top text {
+  color: var(--themeColor);
+  padding: 0 5px;
+}
+.route_record .top .complete {
+  text-align: center;
+  line-height: 40px;
+  color: #fff;
+  background-color: var(--themeColor);
+  font-weight: 800;
+}
+.route_record .mask_warp {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.route_record .loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60%;
+}
+.route_record .mask {
+  position: absolute;
+  width: 250px;
+  height: 300px;
+  z-index: 2;
+  top: 40%;
+  left: 50%;
+  margin-top: -150px;
+  margin-left: -125px;
+  background-color: #fff;
+  border-radius: 20px;
+}
+.route_record .mask .title {
+  height: 150px;
+  width: 100%;
+  background-color: var(--themeColor);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  text-align: center;
+  line-height: 150px;
+  font-size: 26px;
+  color: #fff;
+  font-weight: 800;
+}
+.route_record .mask .content {
+  padding: 20px 10px;
+  color: #333;
+}
+.route_record .mask .btn {
+  width: 100px;
+  height: 30px;
+  margin: 20px auto;
+  border-radius: 5px;
+  background-color: #00b23b;
+  color: #fff;
+  text-align: center;
+  line-height: 30px;
+}
+.route_record .ask_mask .mask {
+  margin-top: 10px;
+  height: 300px;
+  top: 25%;
+}
+.route_record .ask_mask .mask .mask_title {
+  height: 25% !important;
+  width: 100%;
+  background-color: var(--themeColor);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  text-align: center;
+  font-size: 24px;
+  color: #fff;
+  font-weight: 500;
+  line-height: 75px;
+}
+.route_record .ask_mask .mask .content {
+  padding: 20px 20px 0px 20px !important;
+  text-indent: 2em;
+  line-height: 30px;
+}
+.route_record .ask_mask .mask .cancle {
+  background-color: #53affd;
+}
+.route_record .ask_mask .mask text {
+  color: var(--themeColor);
+  padding: 0 5rpx;
+}
+.route_record .background {
+  width: 100%;
+  height: 68%;
+  position: fixed;
+  background-size: 100% 100%;
+  z-index: -1;
+}
+.route_record .questions {
+  width: 100%;
+  height: 60%;
+}
+.route_record .questions .special {
+  position: relative;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 30%;
+  margin-top: 20rpx;
+}
+.route_record .questions .special image {
+  border-radius: 10rpx;
+  width: 80%;
+  height: 80%;
+}
+.route_record .questions .special text {
+  margin-top: 8rpx;
+  color: #222;
+  font-size: 24rpx;
+}
+.route_record .questions .special .mask2 {
+  position: absolute;
+  width: 80%;
+  height: 79%;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10rpx;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.route_record .questions .special .mask2 image {
+  width: 30%;
+}
+.route_record .my_route_info {
+  position: absolute;
+  height: 30%;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #dedede;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  padding: 20px;
+}
+.route_record .my_route_info .title1 {
+  margin-bottom: 5px;
+  font-size: 24px;
+  color: var(--themeColor);
+}
+.route_record .my_route_info .duihuan_btn {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 120px;
+  height: 120px;
+  top: -36%;
+  left: 50%;
+  margin-left: -60px;
+}
+.route_record .my_route_info .duihuan_btn .duihuan_info {
+  margin-bottom: 3px;
+  padding: 5px;
+  border-radius: 20px 20px 20px 20px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 400;
+}
+.route_record .my_route_info .duihuan_btn .duihuan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80px;
+  height: 80px;
+  border: 1px solid var(--themeColor);
+  border-radius: 50%;
+  background-color: var(--themeColor);
+}
+.route_record .my_route_info .duihuan_btn .duihuan text {
+  font-size: 12px;
+  color: #fff;
+}
+.route_record .my_route_info .duihuan_btn .duihuan view {
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+}
+.route_record .my_route_info .duihuan_btn .bn_duihuan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80px;
+  height: 80px;
+  border: 1px solid #666;
+  border-radius: 50%;
+  background-color: #666;
+}
+.route_record .my_route_info .duihuan_btn .bn_duihuan text {
+  font-size: 12px;
+  color: #ccc;
+}
+.route_record .my_route_info .duihuan_btn .bn_duihuan view {
+  font-size: 24px;
+  font-weight: 600;
+  color: #ccc;
+}
+.route_record .my_route_info .info_warp .title {
+  display: flex;
+  margin-bottom: 10px;
+}
+.route_record .my_route_info .info_warp .title .right {
+  display: flex;
+  flex: 1;
+}
+.route_record .my_route_info .info_warp .title .right text {
+  color: #666;
+  margin-right: 10px;
+}
+.route_record .my_route_info .info_warp .title .right .cur_place {
+  color: #53affd;
+}
+.route_record .my_route_info .info_warp .totalStep {
+  display: flex;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #666;
+}
+.route_record .my_route_info .info_warp .totalStep .distance {
+  flex: 1;
+}
+.route_record .my_route_info .info_warp .totalStep .distance view {
+  color: #222;
+  font-size: 26rpx;
+}
+.route_record .my_route_info .info_warp .totalStep .totalDay {
+  flex: 1;
+}
+.route_record .my_route_info .info_warp .totalStep .totalDay view {
+  color: #222;
+  font-size: 26rpx;
+}
+.route_record .my_route_info .info_warp .totalStep .rank {
+  flex: 1;
+}
+.route_record .my_route_info .info_warp .totalStep .rank text {
+  color: #53affd;
+}
+.route_record .my_route_info .info_warp .totalStep .rank view {
+  color: var(--themeColor);
+  font-size: 26rpx;
+}
+.route_record .my_route_info .info_warp .toDayStep {
+  display: flex;
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+}
+.route_record .my_route_info .info_warp .toDayStep .distance {
+  flex: 1;
+}
+.route_record .my_route_info .info_warp .toDayStep .distance view {
+  color: #222;
+  font-size: 26rpx;
+}
+.route_record .my_route_info .info_warp .toDayStep .can {
+  flex: 1;
+}
+.route_record .my_route_info .info_warp .toDayStep .can view {
+  color: #222;
+  font-size: 26rpx;
+}
+.route_record .my_route_info .info_warp .toDayStep .todayStep {
+  flex: 1;
+}
+.route_record .my_route_info .info_warp .toDayStep .todayStep view {
+  color: #222;
+  font-size: 26rpx;
+}

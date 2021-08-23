@@ -1,0 +1,109 @@
+<view class="index">
+
+    <!--轮播图开始 -->
+    <!--
+    <view class="index_swiper">
+        <swiper indicator-dots indicator-color="rgba(0,0,0,.3)" autoplay interval="3000" circular>
+    
+             <swiper-item 
+             wx:for="{{swiper_img}}"
+             wx:key="*this"
+             >
+                 <navigator url="" open-type="navigate">
+                     <image class="" src="{{item}}" mode="widthFix"/>
+                 </navigator>
+             </swiper-item>
+      
+         </swiper>
+    </view> -->
+    <!--轮播图结束 -->
+
+     <view class="info_img">
+         <view wx:if="{{image_loading}}" class="loader--audioWave loader"></view>
+         <view wx:else class="fade-in">
+             <image src="https://i.loli.net/2021/05/10/onFGp5Awz8dJvKc.png" bindload="imageLoad" mode="widthFix" />  
+         </view>
+     </view>
+      
+
+    <!--步数开始 -->
+    <view class="Step_warp">
+         <view class="left_warp Comm">
+             <view class="warp_style">
+                 <text>我的积分</text>
+                 <view class="fade-in">{{myCredit}}</view>
+             </view>
+         </view>
+
+         <view class="myStep Comm">
+             <view class="warp_style">
+                 <text>今日步数</text>
+                 <view class="fade-in">{{myStep}}步</view>
+             </view>
+         </view>
+
+         <view class="right_warp Comm">
+            <view class="warp_style">
+                 <text>我的排名</text>
+                 <view class="fade-in">{{myRank}}</view>
+             </view>
+         </view>
+    </view>
+    <!--步数结束 -->
+
+   <view class="top_three">
+         <view class="title iconfont icon-xiaoguoyouxiu">党史学习标兵</view>
+         <view class="rank_wrap">
+              <view class="second Comm fade-in "> 
+                 <image class="icon" src="{{top_three[1]?'../../icon/second.png':''}}" mode="widthFix" />
+                 <image class="img" src="{{top_three[1].image?top_three[1].image:'../../icon/wait.png'}}" mode="widthFix"/>
+                 <view>{{top_three[1].department?top_three[1].department:''}} {{top_three[1].Name?top_three[1].Name:'虚位以待'}}</view>
+              </view>
+              <view class="first Comm fade-in "> 
+                 <image class="icon" src="{{top_three[0]?'../../icon/first.png':''}}" mode="widthFix" />
+                 <image class="img" src="{{top_three[0].image?top_three[0].image:'../../icon/wait.png'}}" mode="widthFix"/>
+                 <view>{{top_three[0].department?top_three[0].department:''}} {{top_three[0].Name?top_three[0].Name:'虚位以待'}}</view>
+              </view>
+             <view class="third Comm fade-in "> 
+                 <image class="icon" src="{{top_three[2]?'../../icon/third.png':''}}" mode="widthFix" />
+                 <image class="img" src="{{top_three[2].image?top_three[2].image:'../../icon/wait.png'}}" mode="widthFix"/>
+                 <view>{{top_three[2].department?top_three[2].department:''}} {{top_three[2].Name?top_three[2].Name:'虚位以待'}}</view>
+             </view>
+         </view>
+           
+        
+   </view>
+     
+
+    <!--栏目导航开始-->
+    <view class="column_Nav">
+         <view class="notice">
+             <view class="title iconfont icon-gonggao">公告</view>
+             <view class="info">小程序需要使用到微信运动，同学们授权微信步数以后方可正常使用，
+             若出现无法获取步数或数据更新不及时的情况，请刷新或重新进入小程序，详情见使用说明。</view>
+             <navigator class="guide" url="/pages/guide/index"> 使用说明 </navigator>   
+         </view>
+         <view class="rank">
+             <view class="title iconfont icon-jifen">积分排行</view>
+             <view class="Step_rank">
+                   <navigator url="/pages/ranks/index" hover-class="navigator-hover" open-type="navigate">
+                       总积分排行
+                   </navigator>
+                     
+             </view>
+             
+             <view class="Credit_rank">
+                   <navigator url="/pages/ranks/index" hover-class="navigator-hover" open-type="navigate">
+                       答题积分排行
+                   </navigator>
+                     
+             </view>
+             
+               
+         </view>
+
+    </view>
+    <!--栏目导航结束-->
+</view>
+  
+

@@ -1,0 +1,34 @@
+<!--pages/myCredit/index.wxml-->
+<view class="mycredit">
+
+    <block wx:if="{{loading}}">
+       <view class="loading" wx:if="{{loading}}">
+             <image class="" src="../../image/loading2.gif" mode="widthFix"/>
+       </view>
+    </block>
+      
+
+    <block wx:else>
+       <view class="credit_map">
+          <echarts class="echarts" id="mychart-credit" canvas-id="mychart-credit" ec="{{ credit }}">  </echarts>
+       </view>
+       <view class="credit_detail">
+          <view class="Comm">
+             <text>步数积分：</text>
+             <view>{{step_credit}}</view>
+          </view>
+          <view class="Comm">
+             <text>答题积分：</text>
+             <view>{{answer_credit}}</view>
+          </view>
+          <view class="Comm">
+              <text>总积分：</text>
+             <view>{{total_credit}}</view>
+          </view>
+       </view>
+    </block>
+        
+     
+       
+</view>
+  

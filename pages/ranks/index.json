@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "Tabs":"../../components/Tabs/tabs"
+  },
+  "navigationBarTitleText": "排行榜",
+  "enablePullDownRefresh":true,
+  "backgroundTextStyle":"dark"
+}

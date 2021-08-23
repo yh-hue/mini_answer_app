@@ -1,0 +1,24 @@
+<!--pages/sectionInfo/index.wxml-->
+
+<view class="loading" wx:if="{{loading}}">
+      <image class="" src="../../image/loading3.gif" mode="widthFix"/>
+</view>
+<view wx:else class="fade-in">
+       <image class="background" src="../../image/background1.jpg" mode="widthFix"/>
+       <view   class="sectioninfo ">
+             <view class="title">{{title}}</view>
+              <view class="image">
+                   <image src="{{src}}" mode="widthFix"/>
+                   </view>
+             <view class="detail">
+                   <text>{{text}}</text>
+             </view>
+       </view>
+       <navigator url="{{url}}" open-type="navigate">
+             开始答题
+       </navigator>
+         
+</view>
+  
+
+  

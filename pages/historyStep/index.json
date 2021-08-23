@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "echarts": "../../components/ec-canvas/ec-canvas"
+  },
+  "navigationBarTitleText": "历史步数"
+}
